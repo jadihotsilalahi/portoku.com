@@ -12,12 +12,9 @@
         body {
             background-color: #000;
             color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             font-family: Arial, sans-serif;
             position: relative;
+            padding: 20px; /* Add padding for better spacing */
         }
         h1 {
             font-size: 5rem;
@@ -58,6 +55,28 @@
         nav ul li a.hiburan{
             color:white;
         }
+
+        /* New styles for small screens */
+        @media (max-width: 768px) {
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            nav {
+                position: static;
+                margin-top: 20px; /* Adjust spacing */
+                text-align: center;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            .left {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -68,24 +87,6 @@
             <li><a href="hiburan.html" class="hiburan">Hiburan</a></li>
         </ul>
     </nav>
-    <style>
-        h4{
-            color: rgb(6, 83, 44);
-        }
-        div a.instagram{
-            color: rgb(6, 83, 44);
-            
-        }
-        div a.twitter{
-            color: rgb(6, 83, 44);
-
-        }
-        div a.github{
-            color: rgb(6, 83, 44);
-
-        }
-
-    </style>
 
     <section class="left">
         <h2>Hi,</h2>
@@ -96,7 +97,7 @@
         <!-- Social Media Icons -->
         <div class="social-icons mt-3">
             <a href="https://www.instagram.com/jadihot_" class="instagram"><i class="fab fa-instagram"></i></a>
-            <a href="http://www.twitter.com/jadihot5" class="twitter"><i class="fab fa-twitter"></i class='fab fa-twitter'></a>
+            <a href="http://www.twitter.com/jadihot5" class="twitter"><i class="fab fa-twitter"></i></a>
             <a href="http://github.com/jadihotsilalahi" class="github"><i class="fab fa-github"></i></a>
         </div>
     </section>
@@ -106,6 +107,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    
 </body>
 </html>

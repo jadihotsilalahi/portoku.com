@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        h1 {
+            font-family: 'Arial', Courier, monospace;
+        }
+
+        p {
+            font-family: 'Arial', Courier, monospace;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .animated {
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container animated">
+        <h1>ABOUT ME </h1>
+        <section>
+            <p>
+                Hallo nama saya Jadihot Silalahi, seorang siswa di SMK SWASTA BUDI SETIA SUNGGAL , saya memiliki  minat dan hobi di bidang IT , Lewat dari website ini saya berdedikasi untuk memberikan edukasi untuk teman - teman yang mencari materi pembelajaran . Maaf Jika Website ini kurang sempurna , Saya Masih Pemula 
+
+
+            </p>
+
+        </section>
+        
+    </div>
+    <div class="container animated">
+        <h1>SARAN</h1>
+        <p>
+       Kirimkan saya sebuah saran atau masukan untuk mengembangkan website ini  </p>
+       <body>
+        <h2>Kolom Komentar</h2>
+        <input type="text" id="nama" placeholder="Nama Anda"><br><br>
+        <textarea id="komentar" rows="4" cols="50" placeholder="Beri Saya Saran..."></textarea><br><br>
+        <button onclick="tampilkanKomentar()">KIRIM </button>
+        <div id="komentarContainer"></div>
+    
+        <script>
+            function tampilkanKomentar() {
+                var nama = document.getElementById("nama").value;
+                var komentar = document.getElementById("komentar").value;
+                var komentarContainer = document.getElementById("komentarContainer");
+                var newComment = document.createElement("div");
+                var namaElement = document.createElement("strong");
+                var namaText = document.createTextNode(nama + ": ");
+                var komentarText = document.createTextNode(komentar);
+    
+                namaElement.appendChild(namaText);
+                newComment.appendChild(namaElement);
+                newComment.appendChild(komentarText);
+                komentarContainer.appendChild(newComment);
+            }
+        </script>
+    
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f5f5f5;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            h2 {
+                font-size: 24px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+            
+            input[type="text"],
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: none;
+            }
+            
+            button {
+                background-color: #00649e;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            
+            button:hover {
+                background-color: #61aef7;
+            }
+            
+            #komentarContainer {
+                margin-top: 20px;
+            }
+            
+            .comment {
+                background-color: #f9f9f9;
+                padding: 10px;
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+            
+            .comment strong {
+                font-weight: bold;
+                color: #333;
+            }
+            
+        </style>
+    
+
+    
+    
+</body>
+</html>
